@@ -1,3 +1,11 @@
+fun main() {
+    // Reduce
+    println(reduceResult)
+
+    // Fold
+    println(foldResult)
+}
+
 val numbers = listOf(1, 2, 3, 4)
 
 /**
