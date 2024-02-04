@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc67b098-586b-4234-8a2a-f6b92735363e" name="Changes" comment="add playground">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/DataClass.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/EqualityChecks.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Iterators.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Ranges.kt" afterDir="false" />
+    <list default="true" id="dc67b098-586b-4234-8a2a-f6b92735363e" name="Changes" comment="add more examples">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Collections.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/DelegatedProperties.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Delegation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/HigherOrderFunctions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LambdaFunctions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ScopeFunctions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FoldAndReduce.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FoldAndReduce.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Infix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Infix.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Operator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Operator.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,23 +28,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2bqUOpOOnDSj8vWAZFQwEaIxq6e" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Kotlin.DataClassKt">
+}</component>
+  <component name="RunManager" selected="Kotlin.DelegatedPropertiesKt">
+    <configuration name="CollectionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectionsKt" />
+      <module name="kotlin-playground" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataClassKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataClassKt" />
       <module name="kotlin-playground" />
@@ -54,29 +60,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EqualityChecksKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="EqualityChecksKt" />
+    <configuration name="DelegatedPropertiesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DelegatedPropertiesKt" />
       <module name="kotlin-playground" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InfixKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="InfixKt" />
+    <configuration name="DelegationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DelegationKt" />
       <module name="kotlin-playground" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IteratorsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IteratorsKt" />
-      <module name="kotlin-playground" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RangesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RangesKt" />
+    <configuration name="ScopeFunctionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ScopeFunctionsKt" />
       <module name="kotlin-playground" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -84,11 +83,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.DelegatedPropertiesKt" />
+        <item itemvalue="Kotlin.DelegationKt" />
+        <item itemvalue="Kotlin.ScopeFunctionsKt" />
+        <item itemvalue="Kotlin.CollectionsKt" />
         <item itemvalue="Kotlin.DataClassKt" />
-        <item itemvalue="Kotlin.EqualityChecksKt" />
-        <item itemvalue="Kotlin.RangesKt" />
-        <item itemvalue="Kotlin.IteratorsKt" />
-        <item itemvalue="Kotlin.InfixKt" />
       </list>
     </recent_temporary>
   </component>
@@ -109,11 +108,24 @@
       <option name="project" value="LOCAL" />
       <updated>1706943440053</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add more examples">
+      <option name="closed" value="true" />
+      <created>1706944837373</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706944837373</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add playground" />
-    <option name="LAST_COMMIT_MESSAGE" value="add playground" />
+    <MESSAGE value="add more examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more examples" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
