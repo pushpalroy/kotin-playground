@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc67b098-586b-4234-8a2a-f6b92735363e" name="Changes" comment="add more examples">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Reified.kt" afterDir="false" />
+    <list default="true" id="dc67b098-586b-4234-8a2a-f6b92735363e" name="Changes" comment="add Reified example">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Volatile.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +40,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.ReifiedKt">
-    <configuration name="CollectionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CollectionsKt" />
-      <module name="kotlin-playground" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.VolatileKt">
     <configuration name="DelegatedPropertiesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DelegatedPropertiesKt" />
       <module name="kotlin-playground" />
@@ -76,13 +69,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VolatileKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VolatileKt" />
+      <module name="kotlin-playground" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.VolatileKt" />
         <item itemvalue="Kotlin.ReifiedKt" />
         <item itemvalue="Kotlin.DelegatedPropertiesKt" />
         <item itemvalue="Kotlin.DelegationKt" />
         <item itemvalue="Kotlin.ScopeFunctionsKt" />
-        <item itemvalue="Kotlin.CollectionsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -119,13 +119,22 @@
       <option name="project" value="LOCAL" />
       <updated>1707033472255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add Reified example">
+      <option name="closed" value="true" />
+      <created>1707359702195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707359702195</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add playground" />
     <MESSAGE value="add more examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more examples" />
+    <MESSAGE value="add Reified example" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Reified example" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
