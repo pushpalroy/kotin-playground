@@ -1,3 +1,5 @@
+package threads
+
 /**
  * When dealing with multiple threads, it's crucial to consider thread safety, especially when threads are accessing
  * shared resources. Kotlin (and Java) provide various mechanisms to handle synchronization and ensure thread safety,

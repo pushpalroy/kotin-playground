@@ -1,3 +1,5 @@
+package threads
+
 /**
  * Let's consider a scenario where we implement a producer-consumer pattern using threads.
  * This pattern is a classic example of a multi-threading scenario where synchronization between threads is crucial
