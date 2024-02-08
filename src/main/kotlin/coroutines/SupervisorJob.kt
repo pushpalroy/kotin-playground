@@ -21,48 +21,41 @@ import kotlinx.coroutines.*
  * failure cancel the entire job hierarchy.
  */
 fun main() = runBlocking {
+
+    println("Normal Job ----->")
     // Example with regular Job
-    val job = launch { // This uses a regular Job implicitly
-        val child1 = launch {
-            println("Child 1 is running")
-            delay(100)
-            println("Child 1 will fail")
-            throw Exception("Child 1 failure")
-        }
-        val child2 = launch {
-            delay(200)
-            println("Child 2 will not run to completion because of sibling failure")
-        }
-        try {
-            joinAll(child1, child2)
-        } catch (e: Exception) {
-            println("Caught exception: ${e.message}")
-        }
+    val job = Job()
+
+    val scope = CoroutineScope(coroutineContext + job)
+    scope.launch {
+        println("Child 1 is running")
+        delay(100)
+        println("Child 1 will fail")
+        throw Exception("Child 1 failure")
+    }
+    scope.launch {
+        delay(200)
+        println("Child 2 will not run to completion because of sibling failure")
     }
     job.join()
 
-    println("----")
-
+    println("Supervisor Job ----->")
     // Example with SupervisorJob
     val supervisorJob = SupervisorJob()
-    val scopeWithSupervisorJob = CoroutineScope(coroutineContext + supervisorJob)
-    scopeWithSupervisorJob.launch {
-        val child1 = launch {
-            println("Supervisor child 1 is running")
-            delay(100)
-            println("Supervisor child 1 will fail")
-            throw Exception("Supervisor child 1 failure")
-        }
-        val child2 = launch {
-            delay(200)
-            println("Supervisor child 2 runs to completion despite sibling failure")
-        }
-        try {
-            joinAll(child1, child2)
-        } catch (e: Exception) {
-            println("This will not be reached, as exceptions are not propagated to the parent")
-        }
-    }.join()
 
+    val supervisorScope = CoroutineScope(coroutineContext + supervisorJob)
+
+    supervisorScope.launch {
+        println("Supervisor child 1 is running")
+        delay(100)
+        println("Supervisor child 1 will fail")
+        throw Exception("Supervisor child 1 failure")
+    }
+    supervisorScope.launch {
+        delay(200)
+        println("Supervisor child 2 runs to completion despite sibling failure")
+    }
+
+    supervisorJob.join()
     println("Supervisor job example completed")
 }
