@@ -16,34 +16,37 @@ import kotlinx.coroutines.*
 fun main() = runBlocking {
     // Define a coroutine exception handler
     val coroutineExceptionHandler = CoroutineExceptionHandler { _, exception ->
-        println("Handled coroutine exception: ${exception.localizedMessage}")
+        println("Coroutine exception: ${exception.localizedMessage}")
     }
 
+    val supervisorJob = SupervisorJob()
     // Create a CoroutineScope with a SupervisorJob and the exception handler
-    val supervisorScope = CoroutineScope(SupervisorJob() + coroutineExceptionHandler)
+    val supervisorScope = CoroutineScope(supervisorJob + coroutineExceptionHandler)
 
+
+    // Task 1 (will complete successfully)
     supervisorScope.launch {
-        // Task 1 (will complete successfully)
-        launch {
-            println("Task 1 is running")
-            delay(100) // Simulate some work
-            println("Task 1 completed successfully")
-        }
+        println("Task 1 is running")
+        delay(2000) // Simulate some work
+        println("Task 1 completed successfully")
+    }
 
-        // Task 2 (will fail)
-        launch {
-            println("Task 2 is running")
-            delay(200) // Simulate some work
-            throw IllegalArgumentException("Task 2 encountered an error") // Fail
-        }
+    // Task 2 (will fail)
+    supervisorScope.launch {
+        println("Task 2 is running")
+        delay(200) // Simulate some work
+        throw IllegalArgumentException("Task 2 encountered an error") // Fail
+    }
 
-        // Task 3 (will complete successfully despite Task 2's failure)
-        launch {
-            println("Task 3 is running")
-            delay(300) // Simulate some work
-            println("Task 3 completed successfully")
-        }
-    }.join() // Wait for all tasks to complete or fail
+    // Task 3 (will complete successfully despite Task 2's failure)
+    supervisorScope.launch {
+        println("Task 3 is running")
+        delay(3000) // Simulate some work
+        println("Task 3 completed successfully")
+    }
+
+    // Wait for all tasks to complete or fail
+    supervisorJob.join()
 
     println("Supervisor scope has completed.")
 }
