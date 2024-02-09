@@ -6,7 +6,7 @@ import kotlin.coroutines.CoroutineContext
 data class Article(val source: String, val content: String)
 
 class NewsSourceScope(context: CoroutineContext) : CoroutineScope {
-    private val job = Job() + context
+    private val job = SupervisorJob() + context
 
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         println("Error: $throwable")
