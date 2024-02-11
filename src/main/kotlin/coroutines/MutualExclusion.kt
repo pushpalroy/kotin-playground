@@ -12,6 +12,10 @@ import kotlin.system.*
  * Coroutine's alternative is called Mutex. It has lock and unlock functions to delimit a critical section. The key
  * difference is that Mutex.lock() is a suspending function. It does not block a thread.
  *
+ * There is a common misconception that making a variable volatile solves concurrency problem. But with volatile
+ * we still don't always get "Counter = 100000" at the end, because volatile variables guarantee linearizable
+ * (this is a technical term for "atomic") reads and writes to the corresponding variable, but do not provide
+ * atomicity of larger actions (increment in our case).
  */
 suspend fun massiveRun(action: suspend () -> Unit) {
     val n = 100  // number of coroutines to launch
